@@ -5,18 +5,18 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import com.example.gymschedule.databinding.FragmentAddBinding
 
-class BlankFragment : Fragment() {
+
+class fragment_add : Fragment() {
+
+    private var binding: FragmentAddBinding? = null
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
-    ): View? {
-        return inflater.inflate(R.layout.fragment_blank, container, false)
-    }
-
-    companion object {
-        @JvmStatic
-        fun newInstance() = BlankFragment()
+    ): View {
+        binding = FragmentAddBinding.inflate(LayoutInflater.from(context), container, false)
+        return binding!!.root
     }
 }
