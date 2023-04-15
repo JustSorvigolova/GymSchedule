@@ -5,4 +5,19 @@
     <string name="home">home</string>
     <string name="add_workout">add</string>
     <string name="my_workout">my_workout</string>
+    <string name="todo">TODO</string>
+    <string name="stop">Stop</string>
+    <string name="pause">Pause</string>
+    <string name="continues">Continue</string>
+    <string name="reset">Reset</string>
+    <string name="start">Start</string>
+    <string name="Calendar">Calendar</string>
+    <string name="timer">Timer</string>
+    <string name="label">edittext</string>
+    <string name="hint">hint</string>
+    <string name="fdgr">Введите текст</string>
+    <string name="action_1" />
+    <string name="action_2" />
+    <string name="supporting_text" />
+    <string name="title" />
 </resources>

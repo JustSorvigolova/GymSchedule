@@ -3,10 +3,6 @@
     <item android:id="@+id/fragment_home"
         android:title="@string/home"
         android:icon="@drawable/ic_baseline_home_24" />
-    <item android:id="@+id/fragment_add"
-        android:title="@string/add_workout"
-        android:icon="@drawable/add_workout"
-         />
     <item android:id="@+id/fragment_my_workout"
         android:title="@string/my_workout"
         android:icon="@drawable/my_workout"

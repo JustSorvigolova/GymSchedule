@@ -1,6 +1,7 @@
 package com.example.gymschedule
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.view.View
 import androidx.navigation.findNavController
 import androidx.navigation.ui.setupWithNavController
 import com.example.gymschedule.databinding.ActivityMainBinding
@@ -9,6 +10,8 @@ import com.example.gymschedule.databinding.ActivityMainBinding
 class MainActivity : AppCompatActivity() {
 
     private lateinit var binding : ActivityMainBinding
+
+
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -19,10 +22,14 @@ class MainActivity : AppCompatActivity() {
 
         val navController = findNavController(R.id.container)
 
+        navController.removeOnDestinationChangedListener { _, destination, _ ->
+         bottomView.visibility = if (destination.id == R.id.fragment_add) View.GONE else View.VISIBLE
+        }
         bottomView.setupWithNavController(navController)
 
+
+
+    }
     }
 
 
-
-}
