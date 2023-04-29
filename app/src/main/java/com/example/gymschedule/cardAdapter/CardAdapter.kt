@@ -1,12 +1,16 @@
 package com.example.gymschedule.cardAdapter
+import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.ImageView
 import android.widget.TextView
+import androidx.navigation.findNavController
 import androidx.recyclerview.widget.RecyclerView
 import com.example.gymschedule.DT.CardItem
 import com.example.gymschedule.R
+import com.example.gymschedule.ViewModelCard.CardViewModel
+
 
 class CardAdapter(private val cardItems: List<CardItem>) : RecyclerView.Adapter<CardAdapter.CardViewHolder>() {
 
@@ -15,10 +19,12 @@ class CardAdapter(private val cardItems: List<CardItem>) : RecyclerView.Adapter<
         return CardViewHolder(view)
     }
 
+
     override fun onBindViewHolder(holder: CardViewHolder, position: Int) {
         val cardItem = cardItems[position]
         holder.titleTextView.text = cardItem.title
         holder.imageView.setImageResource(cardItem.imageResId)
+
     }
 
     override fun getItemCount(): Int {
@@ -30,3 +36,4 @@ class CardAdapter(private val cardItems: List<CardItem>) : RecyclerView.Adapter<
         val imageView: ImageView = itemView.findViewById(R.id.imageView)
     }
 }
+

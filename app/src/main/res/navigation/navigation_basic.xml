@@ -9,7 +9,26 @@
         android:id="@+id/fragment_home"
         android:name="com.example.gymschedule.fragment_home"
         android:label="fragment_home"
-        tools:layout="@layout/fragment_home" />
+        tools:layout="@layout/fragment_home" >
+        <action
+            android:id="@+id/action_fragment_home_to_fragment_Bicepc"
+            app:popUpTo="@id/fragment_Bicepc" />
+        <action
+            android:id="@+id/action_fragment_home_to_fragment_back"
+            app:destination="@id/fragment_back" />
+        <action
+            android:id="@+id/action_fragment_home_to_fragment_legs"
+            app:destination="@id/fragment_legs" />
+        <action
+            android:id="@+id/action_fragment_home_to_fragment_shoulders"
+            app:destination="@id/fragment_shoulders" />
+        <action
+            android:id="@+id/action_fragment_home_to_fragment_chest"
+            app:destination="@id/fragment_chest" />
+        <action
+            android:id="@+id/action_fragment_home_to_fragment_Tricepc"
+            app:destination="@id/fragment_Tricepc" />
+    </fragment>
     <fragment
         android:id="@+id/fragment_my_workout"
         android:name="com.example.gymschedule.fragment_my_workout"
@@ -21,4 +40,58 @@
         android:name="com.example.gymschedule.fragment_add"
         android:label="fragment_add"
         tools:layout="@layout/fragment_add" />
+    <fragment
+        android:id="@+id/fragment_Bicepc"
+        android:name="com.example.gymschedule.Fragment_Bicepc"
+        android:label="fragment__bicepc"
+        tools:layout="@layout/fragment__bicepc" >
+        <action
+            android:id="@+id/action_fragment_Bicepc_to_fragment_home"
+            app:destination="@id/fragment_home" />
+    </fragment>
+    <fragment
+        android:id="@+id/fragment_back"
+        android:name="com.example.gymschedule.Fragment_back"
+        android:label="fragment_back"
+        tools:layout="@layout/fragment_back" >
+        <action
+            android:id="@+id/action_fragment_back_to_fragment_home"
+            app:destination="@id/fragment_home" />
+    </fragment>
+    <fragment
+        android:id="@+id/fragment_Tricepc"
+        android:name="com.example.gymschedule.Fragment_Tricepc"
+        android:label="fragment__tricepc"
+        tools:layout="@layout/fragment__tricepc" >
+        <action
+            android:id="@+id/action_fragment_Tricepc_to_fragment_home"
+            app:destination="@id/fragment_home" />
+    </fragment>
+    <fragment
+        android:id="@+id/fragment_chest"
+        android:name="com.example.gymschedule.Fragment_chest"
+        android:label="fragment_chest"
+        tools:layout="@layout/fragment_chest" >
+        <action
+            android:id="@+id/action_fragment_chest_to_fragment_home"
+            app:destination="@id/fragment_home" />
+    </fragment>
+    <fragment
+        android:id="@+id/fragment_legs"
+        android:name="com.example.gymschedule.Fragment_legs"
+        android:label="fragment_legs"
+        tools:layout="@layout/fragment_legs" >
+        <action
+            android:id="@+id/action_fragment_legs_to_fragment_home"
+            app:destination="@id/fragment_home" />
+    </fragment>
+    <fragment
+        android:id="@+id/fragment_shoulders"
+        android:name="com.example.gymschedule.Fragment_shoulders"
+        android:label="fragment_shoulders"
+        tools:layout="@layout/fragment_shoulders" >
+        <action
+            android:id="@+id/action_fragment_shoulders_to_fragment_home"
+            app:destination="@id/fragment_home" />
+    </fragment>
 </navigation>

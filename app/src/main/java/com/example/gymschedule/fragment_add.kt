@@ -10,6 +10,7 @@ import com.example.gymschedule.databinding.FragmentAddBinding
 
 class fragment_add : Fragment() {
     private var binding: FragmentAddBinding? = null
+
     override fun onCreateView(
         inflater: LayoutInflater,
         container: ViewGroup?,

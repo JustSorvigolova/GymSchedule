@@ -1,3 +1,3 @@
 package com.example.gymschedule.DT
 
-data class CardItem(val title: String, val imageResId: Int)
+data class CardItem(val title: String, val imageResId: Int, val fragmentId: Int)
