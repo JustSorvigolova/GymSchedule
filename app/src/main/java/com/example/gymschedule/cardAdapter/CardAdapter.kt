@@ -28,15 +28,28 @@ class CardAdapter(private val cardItems: List<CardItem>, private val cardViewMod
         holder.imageView.setImageResource(cardItem.imageResId)
         holder.itemView.setOnClickListener {
             cardViewModel.onCardItemClick(cardItem)
-            val action = when (cardItem.fragmentId) {
-                R.id.biceps_fragment -> fragment_homeDirections.actionFragmentHomeToFragmentBicepc()
-                R.id.triceps_fragment -> fragment_homeDirections.actionFragmentHomeToFragmentTricepc()
-                R.id.back_fragment -> fragment_homeDirections.actionFragmentHomeToFragmentBack()
-                R.id.chest_fragment -> fragment_homeDirections.actionFragmentHomeToFragmentChest()
-                R.id.legs_fragment -> fragment_homeDirections.actionFragmentHomeToFragmentLegs()
-                R.id.shoulders_fragment -> fragment_homeDirections.actionFragmentHomeToFragmentShoulders()
-
-                else -> throw IllegalArgumentException("Unknown fragment ID ${cardItem.fragmentId}")
+            val action = when(cardItem.fragmentId) {
+                R.id.biceps_fragment -> {
+                    fragment_homeDirections.actionFragmentHomeToBicepsFragment()
+                }
+                R.id.triceps_fragment -> {
+                    fragment_homeDirections.actionFragmentHomeToFragmentTricepc()
+                }
+                R.id.back_fragment -> {
+                    fragment_homeDirections.actionFragmentHomeToFragmentBack()
+                }
+                R.id.chest_fragment -> {
+                    fragment_homeDirections.actionFragmentHomeToFragmentChest()
+                }
+                R.id.legs_fragment -> {
+                    fragment_homeDirections.actionFragmentHomeToFragmentLegs()
+                }
+                R.id.shoulders_fragment -> {
+                    fragment_homeDirections.actionFragmentHomeToFragmentShoulders()
+                }
+                else -> {
+                    throw IllegalArgumentException("Unknown fragment ID ${cardItem.fragmentId}")
+                }
             }
             it.findNavController().navigate(action)
         }

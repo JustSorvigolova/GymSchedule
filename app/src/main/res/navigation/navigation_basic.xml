@@ -11,9 +11,6 @@
         android:label="fragment_home"
         tools:layout="@layout/fragment_home" >
         <action
-            android:id="@+id/action_fragment_home_to_fragment_Bicepc"
-            app:popUpTo="@id/fragment_Bicepc" />
-        <action
             android:id="@+id/action_fragment_home_to_fragment_back"
             app:destination="@id/fragment_back" />
         <action
@@ -28,6 +25,9 @@
         <action
             android:id="@+id/action_fragment_home_to_fragment_Tricepc"
             app:destination="@id/fragment_Tricepc" />
+        <action
+            android:id="@+id/action_fragment_home_to_biceps_fragment"
+            app:destination="@id/biceps_fragment" />
     </fragment>
     <fragment
         android:id="@+id/fragment_my_workout"
@@ -40,15 +40,6 @@
         android:name="com.example.gymschedule.fragment_add"
         android:label="fragment_add"
         tools:layout="@layout/fragment_add" />
-    <fragment
-        android:id="@+id/fragment_Bicepc"
-        android:name="com.example.gymschedule.Fragment_bicepc"
-        android:label="fragment__bicepc"
-        tools:layout="@layout/fragment__bicepc" >
-        <action
-            android:id="@+id/action_fragment_Bicepc_to_fragment_home"
-            app:destination="@id/fragment_home" />
-    </fragment>
     <fragment
         android:id="@+id/fragment_back"
         android:name="com.example.gymschedule.Fragment_back"
@@ -92,6 +83,15 @@
         tools:layout="@layout/fragment_shoulders" >
         <action
             android:id="@+id/action_fragment_shoulders_to_fragment_home"
+            app:destination="@id/fragment_home" />
+    </fragment>
+    <fragment
+        android:id="@+id/biceps_fragment"
+        android:name="com.example.gymschedule.Fragment_bicepc"
+        android:label="fragment__bicepc"
+        tools:layout="@layout/fragment__bicepc" >
+        <action
+            android:id="@+id/action_biceps_fragment_to_fragment_home"
             app:destination="@id/fragment_home" />
     </fragment>
 </navigation>
