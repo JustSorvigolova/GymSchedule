@@ -7,7 +7,7 @@ import android.view.View
 import android.view.ViewGroup
 import com.example.gymschedule.databinding.FragmentBicepcBinding
 
-class Fragment_Bicepc : Fragment() {
+class Fragment_bicepc : Fragment() {
 
     private var binding: FragmentBicepcBinding?=null
 

@@ -16,8 +16,7 @@ class fragment_my_workout : Fragment() {
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View {
-        binding = FragmentMyWorkoutBinding.inflate(LayoutInflater.from(context), container,
-            false)
+        binding = FragmentMyWorkoutBinding.inflate(LayoutInflater.from(context), container, false)
         return binding!!.root
     }
 }

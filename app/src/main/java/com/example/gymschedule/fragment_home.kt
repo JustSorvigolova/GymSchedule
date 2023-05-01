@@ -4,15 +4,17 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.lifecycle.ViewModelProvider
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.gymschedule.DT.CardItem
+import com.example.gymschedule.ViewModelCard.CardViewModel
 import com.example.gymschedule.cardAdapter.CardAdapter
 import com.example.gymschedule.databinding.FragmentHomeBinding
 
 
 class fragment_home : Fragment() {
     private var binding: FragmentHomeBinding? = null
-
+    private lateinit var cardViewModel: CardViewModel
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -20,12 +22,14 @@ class fragment_home : Fragment() {
     ): View {
        binding = FragmentHomeBinding.inflate(LayoutInflater.from(context), container,
            false)
+        cardViewModel = ViewModelProvider(requireActivity())[CardViewModel::class.java]
         val cardItems = createCardItems()
         val recyclerView = binding!!.recyclerView
         recyclerView.layoutManager = LinearLayoutManager(context)
-        recyclerView.adapter = CardAdapter(cardItems)
+        recyclerView.adapter = CardAdapter(cardItems, cardViewModel)
         return binding!!.root
     }
+
 
 
     private fun createCardItems(): List<CardItem> {

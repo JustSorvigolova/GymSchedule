@@ -2,17 +2,14 @@ package com.example.gymschedule
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
-import androidx.lifecycle.ViewModelProvider
 import androidx.navigation.findNavController
 import androidx.navigation.ui.setupWithNavController
-import com.example.gymschedule.ViewModelCard.CardViewModel
 import com.example.gymschedule.databinding.ActivityMainBinding
 
 
 class MainActivity : AppCompatActivity() {
 
     private lateinit var binding : ActivityMainBinding
-    private lateinit var cardViewModel: CardViewModel
 
 
     override fun onCreate(savedInstanceState: Bundle?) {

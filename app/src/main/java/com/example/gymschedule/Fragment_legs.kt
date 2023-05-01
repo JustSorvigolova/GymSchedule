@@ -5,16 +5,17 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import com.example.gymschedule.databinding.FragmentLegsBinding
 
 class Fragment_legs : Fragment() {
 
-
+    private var binding: FragmentLegsBinding? = null
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
-    ): View? {
-        // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_legs, container, false)
+    ): View {
+        binding = FragmentLegsBinding.inflate(LayoutInflater.from(context), container, false)
+        return binding!!.root
     }
 
 

@@ -42,7 +42,7 @@
         tools:layout="@layout/fragment_add" />
     <fragment
         android:id="@+id/fragment_Bicepc"
-        android:name="com.example.gymschedule.Fragment_Bicepc"
+        android:name="com.example.gymschedule.Fragment_bicepc"
         android:label="fragment__bicepc"
         tools:layout="@layout/fragment__bicepc" >
         <action
