@@ -37,9 +37,19 @@
 
     <fragment
         android:id="@+id/fragment_add"
-        android:name="com.example.gymschedule.fragment_add"
+        android:name="com.example.gymschedule.Forms.fragment_add"
         android:label="fragment_add"
-        tools:layout="@layout/fragment_add" />
+        tools:layout="@layout/fragment_add" >
+        <action
+            android:id="@+id/action_fragment_add_to_biceps_fragment"
+            app:destination="@id/biceps_fragment" />
+        <action
+            android:id="@+id/action_fragment_add_to_fragment_home"
+            app:destination="@id/fragment_home" />
+        <action
+            android:id="@+id/action_fragment_add_to_fragment_my_workout"
+            app:destination="@id/fragment_my_workout" />
+    </fragment>
     <fragment
         android:id="@+id/fragment_back"
         android:name="com.example.gymschedule.Fragment_back"
@@ -93,5 +103,8 @@
         <action
             android:id="@+id/action_biceps_fragment_to_fragment_home"
             app:destination="@id/fragment_home" />
+        <action
+            android:id="@+id/action_biceps_fragment_to_fragment_add"
+            app:destination="@id/fragment_add" />
     </fragment>
 </navigation>

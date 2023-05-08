@@ -1,15 +1,24 @@
 <?xml version="1.0" encoding="utf-8"?>
 <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:id="@+id/chest_fragment"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".Fragment_chest">
 
-    <!-- TODO: Update blank fragment layout -->
-    <TextView
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/floatingActionButton"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="chest" />
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|end"
+        android:layout_margin="8dp"
+        android:background="#FFFFFF"
+        android:contentDescription="@string/add_chest"
+        android:src="@drawable/add_button"
+        app:backgroundTint="#F57C00"
+        app:elevation="0dp"
+        app:tint="@color/white"
+        tools:ignore="ImageContrastCheck" />
 
 </FrameLayout>

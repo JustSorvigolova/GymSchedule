@@ -1,4 +1,4 @@
-package com.example.gymschedule
+package com.example.gymschedule.Forms
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
@@ -19,4 +19,6 @@ class fragment_add : Fragment() {
         binding = FragmentAddBinding.inflate(LayoutInflater.from(context), container, false)
         return binding!!.root
     }
+
+
 }

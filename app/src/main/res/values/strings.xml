@@ -20,4 +20,14 @@
     <string name="action_2" />
     <string name="supporting_text" />
     <string name="title" />
+    <string name="add_triceps">add_triceps</string>
+    <string name="add_biceps">add_biceps</string>
+    <string name="add_back">add_back</string>
+    <string name="add_chest">add_chest</string>
+    <string name="add_legs">add_legs</string>
+    <string name="add_shoulders">add_shoulders</string>
+    <string name="title_hint">title_hint</string>
+    <string name="description_hint">description_hint</string>
+    <string name="image_description">image_description</string>
+    <string name="add_image_description">add_image_description</string>
 </resources>
