@@ -33,9 +33,10 @@
             android:padding="20dp">
 
             <TextView
+                android:id="@+id/Title"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Upload Data"
+                android:text="Upload work"
                 android:textAlignment="center"
                 android:textColor="@color/lavender"
                 android:textSize="30sp" />
@@ -45,19 +46,21 @@
                 android:layout_width="349dp"
                 android:layout_height="320dp"
                 android:layout_marginTop="10dp"
+                android:onClick="uploadImage"
                 android:scaleType="fitXY"
-                android:src="@drawable/add_photo_image" />
+                android:src="@drawable/add_photo_image"
+                tools:ignore="UsingOnClickInXml" />
 
             <EditText
-                android:id="@+id/uploadTopic"
+                android:id="@+id/uploadTitle"
                 android:layout_width="match_parent"
                 android:layout_height="60dp"
                 android:layout_marginTop="20dp"
                 android:background="@drawable/lavender_border"
                 android:gravity="start|center_vertical"
-                android:hint="Enter topic name"
+                android:hint="@string/enter_title"
                 android:padding="16dp"
-                android:textColor="@color/lavender" />
+                android:textColor="#000000" />
 
             <EditText
                 android:id="@+id/uploadDesc"
@@ -66,9 +69,9 @@
                 android:layout_marginTop="20dp"
                 android:background="@drawable/lavender_border"
                 android:gravity="start|center_vertical"
-                android:hint="Enter description"
+                android:hint="@string/enter_description"
                 android:padding="16dp"
-                android:textColor="#F57C00" />
+                android:textColor="#000000" />
 
             <Button
                 android:id="@+id/saveButton"

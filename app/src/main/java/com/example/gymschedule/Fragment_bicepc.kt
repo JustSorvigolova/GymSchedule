@@ -26,7 +26,6 @@ class Fragment_bicepc : Fragment() {
                 .commit()
             binding!!.floatingActionButton.visibility = View.GONE
         }
-
         return binding!!.root
     }
 

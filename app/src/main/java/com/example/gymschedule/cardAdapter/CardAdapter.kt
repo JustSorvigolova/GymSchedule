@@ -1,5 +1,4 @@
 package com.example.gymschedule.cardAdapter
-import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -22,7 +21,6 @@ class CardAdapter(private val cardItems: List<CardItem>, private val cardViewMod
 
 
     override fun onBindViewHolder(holder: CardViewHolder, position: Int) {
-        Log.d("CardAdapter", "onBindViewHolder called")
         val cardItem = cardItems[position]
         holder.titleTextView.text = cardItem.title
         holder.imageView.setImageResource(cardItem.imageResId)

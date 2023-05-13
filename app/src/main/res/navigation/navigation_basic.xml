@@ -28,6 +28,9 @@
         <action
             android:id="@+id/action_fragment_home_to_biceps_fragment"
             app:destination="@id/biceps_fragment" />
+        <action
+            android:id="@+id/action_fragment_home_to_fragment_add"
+            app:destination="@id/fragment_add" />
     </fragment>
     <fragment
         android:id="@+id/fragment_my_workout"
@@ -105,6 +108,9 @@
             app:destination="@id/fragment_home" />
         <action
             android:id="@+id/action_biceps_fragment_to_fragment_add"
+            app:destination="@id/fragment_add" />
+        <action
+            android:id="@+id/action_biceps_fragment_to_fragment_add2"
             app:destination="@id/fragment_add" />
     </fragment>
 </navigation>

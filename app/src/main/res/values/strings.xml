@@ -30,4 +30,6 @@
     <string name="description_hint">description_hint</string>
     <string name="image_description">image_description</string>
     <string name="add_image_description">add_image_description</string>
+    <string name="enter_description">Enter description</string>
+    <string name="enter_title">Enter Title</string>
 </resources>
