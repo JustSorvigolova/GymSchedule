@@ -31,6 +31,9 @@
         <action
             android:id="@+id/action_fragment_home_to_fragment_add"
             app:destination="@id/fragment_add" />
+        <action
+            android:id="@+id/action_fragment_home_to_fragment_add2"
+            app:destination="@id/fragment_add" />
     </fragment>
     <fragment
         android:id="@+id/fragment_my_workout"
@@ -52,6 +55,9 @@
         <action
             android:id="@+id/action_fragment_add_to_fragment_my_workout"
             app:destination="@id/fragment_my_workout" />
+        <action
+            android:id="@+id/action_fragment_add_to_fragment_home2"
+            app:destination="@id/fragment_home" />
     </fragment>
     <fragment
         android:id="@+id/fragment_back"

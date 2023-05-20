@@ -27,9 +27,10 @@
         android:background="#F57C00"
         app:elevation="5dp"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="@id/container"
 
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/container"
         app:menu="@menu/menu_bottom">
 
     </com.google.android.material.bottomnavigation.BottomNavigationView>

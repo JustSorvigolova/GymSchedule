@@ -44,7 +44,7 @@
                 app:srcCompat="@drawable/b_1" />
 
             <TextView
-                android:id="@+id/titleTextView"
+                android:id="@+id/title"
                 android:layout_width="351dp"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="8dp"

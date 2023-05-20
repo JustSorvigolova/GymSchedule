@@ -3,9 +3,11 @@ import androidx.lifecycle.ViewModel
 import com.google.firebase.database.FirebaseDatabase
 
 
-class UploadViewModel: ViewModel() {
 
-    private val database = FirebaseDatabase.getInstance().reference.child("biceps")
+
+class UploadViewModelShoulders: ViewModel() {
+
+    private val database = FirebaseDatabase.getInstance().reference.child("shoulders")
 
     fun sendDataToFirebase(title: String, desc: String, imageURL: String?) {
         val data = Data_Card(title, desc, imageURL)

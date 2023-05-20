@@ -11,18 +11,16 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.lifecycle.ViewModelProvider
 import com.example.gymschedule.Data.*
-import com.example.gymschedule.Fragment_bicepc
+import com.example.gymschedule.Fragment_back
 import com.example.gymschedule.R
-import com.example.gymschedule.databinding.FragmentAddBinding
 import com.google.firebase.storage.FirebaseStorage
 import java.util.*
+import com.example.gymschedule.databinding.FragmentAddBackBinding
 
 
-class fragment_add : Fragment() {
-    private var binding: FragmentAddBinding? = null
-
-    private lateinit var viewModelbiceps: UploadViewModel
-
+class Fragment_Add_Back : Fragment() {
+    private var binding: FragmentAddBackBinding? = null
+    private lateinit var viewModelBack: UploadViewModelBack
     private val PICK_IMAGE_REQUEST = 1
 
 
@@ -31,9 +29,8 @@ class fragment_add : Fragment() {
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View {
-        binding = FragmentAddBinding.inflate(LayoutInflater.from(context), container, false)
-        viewModelbiceps = ViewModelProvider(this)[UploadViewModel::class.java]
-
+        binding = FragmentAddBackBinding.inflate(LayoutInflater.from(context), container, false)
+        viewModelBack = ViewModelProvider(this)[UploadViewModelBack::class.java]
         return binding!!.root
     }
 
@@ -53,16 +50,16 @@ class fragment_add : Fragment() {
             val imageUri = binding!!.uploadImage.tag as Uri?
             if (imageUri != null) {
                 uploadImageToFirebaseStorage(title, desc, imageUri)
-                val fragment = Fragment_bicepc()
+                val fragment = Fragment_back()
                 parentFragmentManager.beginTransaction()
-                    .replace(R.id.biceps_fragment, fragment)
+                    .replace(R.id.back_fragment, fragment)
                     .addToBackStack(null)
                     .commit()
             } else {
-                viewModelbiceps.sendDataToFirebase(title, desc, null)
-                val fragment = Fragment_bicepc()
+                viewModelBack.sendDataToFirebase(title, desc, null)
+                val fragment = Fragment_back()
                 parentFragmentManager.beginTransaction()
-                    .replace(R.id.biceps_fragment, fragment)
+                    .replace(R.id.back_fragment, fragment)
                     .addToBackStack(null)
                     .commit()
             }
@@ -73,7 +70,7 @@ class fragment_add : Fragment() {
         storageRef.putFile(imageUri)
             .addOnSuccessListener {
                 storageRef.downloadUrl.addOnSuccessListener { imageUrl ->
-                    viewModelbiceps.sendDataToFirebase(title, desc, imageUrl.toString())
+                    viewModelBack.sendDataToFirebase(title, desc, imageUrl.toString())
                 }
             }
             .addOnFailureListener {

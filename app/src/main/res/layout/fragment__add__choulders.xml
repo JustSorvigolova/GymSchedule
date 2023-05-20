@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/fragment_add_forms"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    tools:context=".Forms.Fragment_Add_Shoulders">
+
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginLeft="5dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginRight="5dp"
+        android:layout_marginBottom="10dp"
+        app:cardCornerRadius="30dp"
+        app:cardElevation="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:background="@drawable/lavender_border"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:padding="20dp">
+
+            <TextView
+                android:id="@+id/Title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Upload work"
+                android:textAlignment="center"
+                android:textColor="@color/lavender"
+                android:textSize="30sp" />
+
+            <ImageView
+                android:id="@+id/uploadImage"
+                android:layout_width="349dp"
+                android:layout_height="320dp"
+                android:layout_marginTop="10dp"
+                android:onClick="uploadImage"
+                android:scaleType="fitXY"
+                android:src="@drawable/add_photo_image"
+                tools:ignore="UsingOnClickInXml" />
+
+            <EditText
+                android:id="@+id/uploadTitle"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:layout_marginTop="20dp"
+                android:background="@drawable/lavender_border"
+                android:gravity="start|center_vertical"
+                android:hint="@string/enter_title"
+                android:padding="16dp"
+                android:textColor="#000000" />
+
+            <EditText
+                android:id="@+id/uploadDesc"
+                android:layout_width="match_parent"
+                android:layout_height="80dp"
+                android:layout_marginTop="20dp"
+                android:background="@drawable/lavender_border"
+                android:gravity="start|center_vertical"
+                android:hint="@string/enter_description"
+                android:padding="16dp"
+                android:textColor="#000000" />
+
+            <Button
+                android:id="@+id/saveButton"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:layout_marginTop="20dp"
+                android:backgroundTint="#F57C00"
+                android:backgroundTintMode="add"
+                android:hapticFeedbackEnabled="false"
+                android:text="Save"
+                android:textColorHighlight="#F57C00"
+                android:textColorLink="#F57C00"
+                android:textSize="18sp"
+                app:cornerRadius="20dp"
+                app:iconTint="#F57C00" />
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+
+
+</ScrollView>

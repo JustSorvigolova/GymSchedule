@@ -21,4 +21,10 @@
         app:tint="@color/white"
         tools:ignore="ImageContrastCheck" />
 
+    <TextView
+        android:id="@+id/textView5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="legs" />
+
 </FrameLayout>
