@@ -11,7 +11,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.lifecycle.ViewModelProvider
-import com.example.gymschedule.Data.UploadViewModelShoulders
+import com.example.gymschedule.ViewModels.ShouldersViewModel
 import com.example.gymschedule.Fragment_shoulders
 import com.example.gymschedule.R
 import com.example.gymschedule.databinding.FragmentAddChouldersBinding
@@ -20,8 +20,7 @@ import java.util.*
 
 class Fragment_Add_Shoulders : Fragment() {
     private var binding: FragmentAddChouldersBinding? = null
-
-    private lateinit var viewModelShoulders: UploadViewModelShoulders
+    private lateinit var viewModelShoulders: ShouldersViewModel
     private val PICK_IMAGE_REQUEST = 1
 
 
@@ -31,7 +30,7 @@ class Fragment_Add_Shoulders : Fragment() {
         savedInstanceState: Bundle?
     ): View {
         binding = FragmentAddChouldersBinding.inflate(LayoutInflater.from(context), container, false)
-        viewModelShoulders = ViewModelProvider(this)[UploadViewModelShoulders::class.java]
+        viewModelShoulders = ViewModelProvider(this)[ShouldersViewModel::class.java]
         return binding!!.root
     }
 

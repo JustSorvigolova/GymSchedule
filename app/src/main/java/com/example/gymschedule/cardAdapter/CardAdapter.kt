@@ -8,11 +8,12 @@ import androidx.navigation.findNavController
 import androidx.recyclerview.widget.RecyclerView
 import com.example.gymschedule.DT.CardItem
 import com.example.gymschedule.R
-import com.example.gymschedule.ViewModelCard.CardViewModel
+import com.example.gymschedule.ViewModels.CardViewModel
 import com.example.gymschedule.fragment_homeDirections
 
 
-class CardAdapter(private val cardItems: List<CardItem>, private val cardViewModel:CardViewModel) : RecyclerView.Adapter<CardAdapter.CardViewHolder>() {
+class CardAdapter(private val cardItems: List<CardItem>, private val cardViewModel: CardViewModel)
+    : RecyclerView.Adapter<CardAdapter.CardViewHolder>() {
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): CardViewHolder {
         val view = LayoutInflater.from(parent.context).inflate(R.layout.card_item_layout, parent, false)

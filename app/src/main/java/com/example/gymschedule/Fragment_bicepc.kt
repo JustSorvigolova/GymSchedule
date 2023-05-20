@@ -1,4 +1,5 @@
 package com.example.gymschedule
+import android.annotation.SuppressLint
 import androidx.lifecycle.observe
 import android.os.Bundle
 import androidx.fragment.app.Fragment
@@ -9,13 +10,13 @@ import com.example.gymschedule.Forms.fragment_add
 import com.example.gymschedule.databinding.FragmentBicepcBinding
 import androidx.lifecycle.ViewModelProvider
 import androidx.recyclerview.widget.LinearLayoutManager
-import com.example.gymschedule.Data.ItemViewModel
+import com.example.gymschedule.ViewModels.BicepsViewModel
 import com.example.gymschedule.cardAdapter.ItemAdapter
 
 
 class Fragment_bicepc : Fragment() {
     private var binding: FragmentBicepcBinding? = null
-    private lateinit var itemViewModel: ItemViewModel
+    private lateinit var itemViewModel: BicepsViewModel
     private lateinit var itemAdapter: ItemAdapter
 
     override fun onCreateView(
@@ -26,7 +27,7 @@ class Fragment_bicepc : Fragment() {
         return binding!!.root
     }
 
-
+    @SuppressLint("NotifyDataSetChanged")
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
@@ -36,7 +37,7 @@ class Fragment_bicepc : Fragment() {
             adapter = itemAdapter
         }
 
-        itemViewModel = ViewModelProvider(this)[ItemViewModel::class.java]
+        itemViewModel = ViewModelProvider(this)[BicepsViewModel::class.java]
         itemViewModel.loadData()
 
         itemViewModel.getItemList().observe(viewLifecycleOwner) { itemList ->
@@ -54,9 +55,8 @@ class Fragment_bicepc : Fragment() {
             binding!!.recyclerView.visibility = View.GONE
         }
     }
-
-    override fun onDestroyView() {
-        super.onDestroyView()
-        binding = null
+        override fun onDestroyView() {
+            super.onDestroyView()
+            binding = null
+        }
     }
-}

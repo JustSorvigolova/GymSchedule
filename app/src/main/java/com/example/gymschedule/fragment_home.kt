@@ -7,7 +7,7 @@ import android.view.ViewGroup
 import androidx.lifecycle.ViewModelProvider
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.gymschedule.DT.CardItem
-import com.example.gymschedule.ViewModelCard.CardViewModel
+import com.example.gymschedule.ViewModels.CardViewModel
 import com.example.gymschedule.cardAdapter.CardAdapter
 import com.example.gymschedule.databinding.FragmentHomeBinding
 

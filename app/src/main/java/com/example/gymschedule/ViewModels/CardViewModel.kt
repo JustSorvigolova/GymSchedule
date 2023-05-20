@@ -1,4 +1,4 @@
-package com.example.gymschedule.ViewModelCard
+package com.example.gymschedule.ViewModels
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import com.example.gymschedule.DT.CardItem

@@ -1,12 +1,25 @@
-package com.example.gymschedule.Data
+package com.example.gymschedule.ViewModels
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
+import com.example.gymschedule.DT.Data_Card
 import com.google.firebase.database.*
 
-class ItemViewModel : ViewModel() {
-    private val databaseRef: DatabaseReference = FirebaseDatabase.getInstance().reference.child("biceps")
+
+class ShouldersViewModel: ViewModel() {
+
+    private val database = FirebaseDatabase.getInstance().reference.child("shoulders")
     private val itemList: MutableLiveData<List<Data_Card>> = MutableLiveData()
+    private val databaseRef: DatabaseReference = FirebaseDatabase.getInstance().reference.child("shoulders")
+
+
+
+    fun sendDataToFirebase(title: String, desc: String, imageURL: String?) {
+        val data = Data_Card(title, desc, imageURL)
+        database.push().setValue(data)
+    }
+
+
 
     fun getItemList(): LiveData<List<Data_Card>> {
         return itemList
@@ -27,7 +40,7 @@ class ItemViewModel : ViewModel() {
             }
 
             override fun onCancelled(error: DatabaseError) {
-                // Обработка ошибок чтения данных
+
             }
         })
     }

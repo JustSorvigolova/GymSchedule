@@ -10,7 +10,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.lifecycle.ViewModelProvider
-import com.example.gymschedule.Data.*
+import com.example.gymschedule.ViewModels.*
 import com.example.gymschedule.Fragment_Tricepc
 import com.example.gymschedule.R
 import com.example.gymschedule.databinding.FragmentAddTricepcBinding
@@ -20,7 +20,7 @@ import java.util.*
 
 class Fragment_Add_Tricepc : Fragment() {
     private var binding: FragmentAddTricepcBinding? = null
-    private lateinit var viewModelTriceps: UploadViewModelTriceps
+    private lateinit var viewModelTriceps: TricepsViewModel
     private val PICK_IMAGE_REQUEST = 1
 
 
@@ -30,7 +30,7 @@ class Fragment_Add_Tricepc : Fragment() {
         savedInstanceState: Bundle?
     ): View {
         binding = FragmentAddTricepcBinding.inflate(LayoutInflater.from(context), container, false)
-        viewModelTriceps = ViewModelProvider(this)[UploadViewModelTriceps::class.java]
+        viewModelTriceps = ViewModelProvider(this)[TricepsViewModel::class.java]
 
         return binding!!.root
     }

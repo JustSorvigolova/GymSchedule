@@ -10,7 +10,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.lifecycle.ViewModelProvider
-import com.example.gymschedule.Data.*
+import com.example.gymschedule.ViewModels.*
 import com.example.gymschedule.Fragment_back
 import com.example.gymschedule.R
 import com.google.firebase.storage.FirebaseStorage
@@ -20,7 +20,7 @@ import com.example.gymschedule.databinding.FragmentAddBackBinding
 
 class Fragment_Add_Back : Fragment() {
     private var binding: FragmentAddBackBinding? = null
-    private lateinit var viewModelBack: UploadViewModelBack
+    private lateinit var viewModelBack: BackViewModel
     private val PICK_IMAGE_REQUEST = 1
 
 
@@ -30,7 +30,7 @@ class Fragment_Add_Back : Fragment() {
         savedInstanceState: Bundle?
     ): View {
         binding = FragmentAddBackBinding.inflate(LayoutInflater.from(context), container, false)
-        viewModelBack = ViewModelProvider(this)[UploadViewModelBack::class.java]
+        viewModelBack = ViewModelProvider(this)[BackViewModel::class.java]
         return binding!!.root
     }
 
@@ -79,8 +79,6 @@ class Fragment_Add_Back : Fragment() {
     }
     override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
         super.onActivityResult(requestCode, resultCode, data)
-
-        // Получить выбранное изображение из галереи
         if (requestCode == PICK_IMAGE_REQUEST && resultCode == Activity.RESULT_OK && data != null && data.data != null) {
             val imageUri = data.data
             binding!!.uploadImage.setImageURI(imageUri)

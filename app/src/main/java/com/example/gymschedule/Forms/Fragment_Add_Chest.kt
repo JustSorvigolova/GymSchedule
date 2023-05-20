@@ -10,7 +10,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.lifecycle.ViewModelProvider
-import com.example.gymschedule.Data.*
+import com.example.gymschedule.ViewModels.*
 import com.example.gymschedule.Fragment_chest
 import com.example.gymschedule.R
 import com.example.gymschedule.databinding.FragmentAddChestBinding
@@ -20,8 +20,7 @@ import java.util.*
 
 class Fragment_Add_Chest : Fragment() {
     private var binding: FragmentAddChestBinding? = null
-
-    private lateinit var viewModelChest: UploadViewModelChest
+    private lateinit var viewModelChest: ChestViewModel
     private val PICK_IMAGE_REQUEST = 1
 
 
@@ -31,7 +30,7 @@ class Fragment_Add_Chest : Fragment() {
         savedInstanceState: Bundle?
     ): View {
         binding = FragmentAddChestBinding.inflate(LayoutInflater.from(context), container, false)
-        viewModelChest = ViewModelProvider(this)[UploadViewModelChest::class.java]
+        viewModelChest = ViewModelProvider(this)[ChestViewModel::class.java]
         return binding!!.root
     }
 

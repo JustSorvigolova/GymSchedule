@@ -11,12 +11,9 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.lifecycle.ViewModelProvider
-import com.example.gymschedule.Data.UploadViewModel
-import com.example.gymschedule.Data.UploadViewModelLegs
-import com.example.gymschedule.Fragment_bicepc
+import com.example.gymschedule.ViewModels.LegsViewModel
 import com.example.gymschedule.Fragment_legs
 import com.example.gymschedule.R
-import com.example.gymschedule.databinding.FragmentAddBinding
 import com.example.gymschedule.databinding.FragmentAddLegsBinding
 import com.google.firebase.storage.FirebaseStorage
 import java.util.*
@@ -25,7 +22,7 @@ import java.util.*
 class Fragment_Add_Legs : Fragment() {
     private var binding: FragmentAddLegsBinding? = null
 
-    private lateinit var viewModelLegs: UploadViewModelLegs
+    private lateinit var viewModelLegs: LegsViewModel
     private val PICK_IMAGE_REQUEST = 1
 
 
@@ -35,7 +32,7 @@ class Fragment_Add_Legs : Fragment() {
         savedInstanceState: Bundle?
     ): View {
         binding = FragmentAddLegsBinding.inflate(LayoutInflater.from(context), container, false)
-        viewModelLegs = ViewModelProvider(this)[UploadViewModelLegs::class.java]
+        viewModelLegs = ViewModelProvider(this)[LegsViewModel::class.java]
         return binding!!.root
     }
 
